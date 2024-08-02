@@ -8,8 +8,13 @@ This measurement shows a Full System 20-20,000Hz SPL and lets us determine the g
 
 If we leave the Hi alone, we need to raise the mid by 3.3db and lower bass by 5.8db. So in CamillaDSP we add a Gain filter of +3.3db to the Mid pipeline and a Gain Filter of -5.8db to the Bass Pipeline.
 
+This plot shows 3 sweeps, Bass - Orange, Mid - Green, Hi - Blue overlaid on a FS 20-20kHz sweep (Brown) before gains are adjusted and a second Full System 20-20kHz (Teal) with gains. Note the dip between 3k and 4kHz caused by out of phase drivers.
+
+![alt text](<Images/Dec 5 6 T31 84db Gains Biquads XOs.jpg>)
+
+
 ### Phase
-The SPL and Spectrogram plots show stuff happening at 3600Hz which is the XO frequency between Mid and Hi, the big dip at 3600Hz is classic indicator of out of phase drivers with the responses subtracting from each other. 
+The SPL and Spectrogram plots show stuff happening at 3600Hz which is the XO frequency between Mid and Hi, the big dip at 3600Hz is classic indicator of out of phase drivers with the responses subtracting from each other, so we add an Invert Phase filter to the Hi pipeline.
 
 ### Delay
 Here is a REW GD plot showing the Mid & High on 0ms and Bass arriving 5ms later
@@ -18,20 +23,24 @@ Here is a REW GD plot showing the Mid & High on 0ms and Bass arriving 5ms later
 and a REW spectrogram showing the same delay
 ![alt text](<Images/Dec 5 5 T31 81db Fs 20-20kHz Biquads and XOs Spectrogram.jpg>)
 
+So we add a delay filter of 5ms to the Mid and Hi pipelines.
 
-The Impulse step response
+The Impulse step response is shown for interest.
 ![alt text](<Images/Dec 5 5 T31 81db Fs 20-20kHz Biquads and XOs Impulse.jpg>)
 
-Time for a Full System (FS) sweep with the gains.
 Gain filters and an Invert Phase filter. I could have included the Invert Phase in one of the Gain filters but for clarity of the pipeline I leave it seperate.
- CamillaDSP gui showing Gain filters.jpg
 
-This plot shows 3 sweeps, Bass - Orange, Mid - Green, Hi - Blue overlaid on a FS 20-20kHz sweep (Brown) before gains are adjusted and a second Full System 20-20kHz (Teal) with gains. Note the dip between 3k and 4kHz caused by out of phase drivers.
- Dec 5 6 T31 84db Gains Biquads XOs.jpg
-So now a 5ms Delay filter is added to the pipeline for Mid and Hi and Full System sweep made that shows a Bass and Mid/Hi are out of phase.
- Dec 5 8 T31 84db Gains Biquads XOs 5ms delay for Mid and Hi.jpg
-So I just added an Invert Phase filter between Mid and Hi to the pipeline.
- Dec 5 9 T31 84db Gains Biquads XOs 5ms delay and Inv Phase for Mid and Hi.jpg
+![alt text](<Images/CamillaDSP gui showing Gain filters.jpg>)
+
+With Gain and delay filters and an Invert Phase between Mid and Hi here is a Full System sweep.
+
+![alt text](<Images/Dec 5 8 T31 84db Gains Biquads XOs 5ms delay for Mid and Hi Hi.jpg>)
+
+This shows that once the drivers are Time Aligned the Bass and Mid are out of phase, so I just added an Invert Phase filter in the Mid pipeline.
+
+![alt text](<Images/Dec 5 9 T31 84db Gains Biquads XOs 5ms delay and Inv Phase for Mid and Hi.jpg>)
+
+
 I was surprised at exactly 5ms delay being required so I ran two more sweeps, one with delay at 4.9ms and one with delay at 5.1ms - these confirmed that the delay needed to be 5.0ms.
 Here is the Pipeline with the filters added
  
