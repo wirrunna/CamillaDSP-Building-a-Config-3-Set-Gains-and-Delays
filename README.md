@@ -42,20 +42,24 @@ This shows that once the drivers are Time Aligned the Bass and Mid are out of ph
 
 
 I was surprised at exactly 5ms delay being required so I ran two more sweeps, one with delay at 4.9ms and one with delay at 5.1ms - these confirmed that the delay needed to be 5.0ms.
+
 Here is the Pipeline with the filters added
  
-UL5 T31 Pipeline.jpg
+![alt text](<Images/UL5 T31 Pipeline.jpg>)
 
-Further refining crossovers.
+
+### Further refining crossovers.
 At this stage we have the three drivers EQualized, Time Aligned by the addition of Delays and Levels of each driver matched by applying Gains. and the first attempt of XOs done. Here are overlaid measurements of each driver showing the "raw" response, the EQ'd response and the EQ'd response with XO applied.
  
+
+
 K-Horn bass does not normally go down to 30Hz, but my room is 10.8 m long (about the length of a 32Hz sound wave) so a bit of EQ will give me 30Hz with a few db loss of sensitivity which is easily compensated for in a tri-amped system with no passive crossovers. 
+
    The equalised mid shows a useable response of -3db at 328Hz with a steep fall below that, the so called "acoustic crossover". Trying XOs from 275Hz on up at 5Hz increments showed that a rePhase generated Hi Pass at 290Hz LR shape with a slope of 96db/octave tidied up the fall off tail and made sure that no deep bass was ever fed to the mid driver while leaving the rest of the rising frequency response alone. 
+
 Sweeps were then taken of 20-5000 with bass XO varying from 310Hz up to 340Hz at 10Hz increments to find the frequency that summed with the mid for the flattest crossover, settling on 330Hz Low Pass with LR shape and a slope of 96db/octave.
+
 The Mid to Hi XO was picked at 3,600Hz and sweeps taken with the Mid Low Pass eventually being moved to 3,800Hz and the Hi High Pass set at 3,600Hz, both LR shape and 48db/octave to provide the flatest response.
  
 
-Here is the Pipeline with Delays, Invert Phase and Gains added
- 
-UL5 T31 Pipeline.jpg
 
