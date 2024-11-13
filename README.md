@@ -61,5 +61,7 @@ Sweeps were then taken of 20-5000 with bass XO varying from 310Hz up to 340Hz at
 
 The Mid to Hi XO was picked at 3,600Hz and sweeps taken with the Mid Low Pass eventually being moved to 3,800Hz and the Hi High Pass set at 3,600Hz, both LR shape and 48db/octave to provide the flatest response.
  
+Next stage is to flatten the excess phase -
 
+https://github.com/wirrunna/CamillaDSP-Building-a-Config-4-Get-Excess-Phase-to-Zero
 
