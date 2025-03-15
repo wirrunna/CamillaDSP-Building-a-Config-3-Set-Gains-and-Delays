@@ -30,6 +30,19 @@ CamillaDSP Gui Pipeline tab showing Invert Phase Gains and Delay filters.jpg
 With Gain and delay filters and an Invert Phase between Mid and Hi here is a Full System sweep.
 
 ![alt text](<Images/REW V5.40 FS 75db EQ XO Gains Delay IPm.jpg>)
+REW V5.40 FS 75db EQ XO Gains Delay IPm.jpg 
+
+GD plot
+![alt text](<Images/REW V5.40 FS 75db EQ XO Gains Delay IPm - GD.jpg>)
+REW V5.40 FS 75db EQ XO Gains Delay IPm - GD.jpg
+
+Step Response
+![alt text](<Images/REW V5.40 FS 75db EQ XO Gains Delay IPm - Step Response.jpg>)
+REW V5.40 FS 75db EQ XO Gains Delay IPm - Step Response.jpg
+
+Spectrogram
+![alt text](<Images/REW V5.40 FS 75db EQ XO Gains Delay IPm - Spectrogram.jpg>)
+REW V5.40 FS 75db EQ XO Gains Delay IPm - Spectrogram.jpg
 
 
 I was surprised at exactly 5ms delay being required so I ran two more sweeps, one with delay at 4.9ms and one with delay at 5.1ms - these confirmed that the delay needed to be 5.0ms.
@@ -40,7 +53,7 @@ CamillaDSP GUI Pipeline tab pipeline plot EQs XO Gain Delay InvPh.jpg
 
 
 ### Further refining crossovers.
-At this stage we have the three drivers EQualized, Time Aligned by the addition of Delays and Levels of each driver matched by applying Gains. and the first attempt of XOs done.
+At this stage we have the three drivers EQualized, Time Aligned by the addition of Delays and Levels of each driver matched by applying Gains and the first attempt of XOs done.
 
 K-Horn bass does not normally go down to 30Hz, but my room is 10.8 m long (about the length of a 32Hz sound wave) so a bit of EQ will give me 30Hz with a few db loss of sensitivity which is easily compensated for in a tri-amped system with no passive crossovers. 
 
